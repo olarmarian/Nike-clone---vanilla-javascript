@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nikey</title>
+
+    <!-- font awesome-->
+    <link rel="stylesheet" 
+        href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" 
+        integrity="sha384-rtJEYb85SiYWgfpCr0jn174XgJTn4rptSOQsMroFBPQSGLdOC5IbubP6lJ35qoM9" 
+        crossorigin="anonymous">
+
+    <!-- page style-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar-account">
+            <div class="banner-div">
+                <span class="navbar-nike-icon">
+                    NikePlus
+                </span>
+                <span class="navbar-jordan-icon">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/37/Jumpman_logo.svg/1200px-Jumpman_logo.svg.png" width="25" height="15">
+                </span>
+                <span class="navbar-hurley-icon">
+                    <img src="https://i.pinimg.com/originals/ea/e0/c6/eae0c6197544e822df2861511614e1cc.png" alt="hurley" width="55" height="15">
+                </span>
+            </div>  
+            <div class="account-div">
+                <ul>
+                    <li class="login-status">join / log in to NikePlus account</li>
+                    <li class="help-btn">help</li>
+                    <li class="cart-btn">
+                        <i class="fas fa-shopping-cart"></i></li>
+                        <div class="cart-items">0</div>
+                    <li>
+                        <i class="fas fa-map-marker"></i>
+                        <span>
+                            romania
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <nav class="navbar-collection">
+            <div class="banner">
+                <a href="/index.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/1280px-Logo_NIKE.svg.png" alt="nike-logo" width="65px" height="25px"></a>
+            </div>
+            <div class="collection-list">
+                <ul class="collection">
+                    <li><a href="#">men</a> </li>
+                    <li><a href="#">women</a></li>
+                    <li><a class="notyet" href="#">kids</a></li>
+                    <li><a class="notyet" href="#">customise</a></li>
+                    <li><a class="notyet" href="#">collection</a></li>
+                </ul>
+            </div>
+            <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input class="search-bar-input" type="text" placeholder="Search">
+                    <i class="fas fa-shopping-cart cart-icon"></i>
+                    <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+    <div class="advertisment-section">
+        <i class="fas fa-chevron-left"></i>
+        <div class="ads">
+            <div class="section-one">OUR LATEST  AND GREATEST, IN YOUR INBOX</div>
+            <div class="section-two">Sign up</div>
+        </div>
+        <i class="fas fa-chevron-right"></i>
+    </div>
+    <div class="menu-overlay hidden">
+        <ul>
+            <li><a href="#">Joint/Log In To NikePlus Account</a></li>
+            <li><a class="notyet" href="#">New Releases <i class="menu-chevron fas fa-chevron-right"></i></a></li>
+            <li><a href="/products.html">Men<i class=" menu-chevron fas fa-chevron-right"></i></a></li>
+            <li><a class="notyet" href="#">Women<i class="menu-chevron  fas fa-chevron-right"></i></a></li>
+            <li><a class="notyet" href="#">Kids<i class="menu-chevron  fas fa-chevron-right"></i></a></li>
+            <li><a class="notyet" href="#">Customize<i class="menu-chevron  fas fa-chevron-right"></i></a></li>
+            <li><a class="notyet" href="#">Shop By Brand <i class="menu-chevron  fas fa-chevron-right"></i></a></li>
+            <li><a class="notyet" href="#">Jordan<i class="menu-chevron  fas fa-chevron-right"></i></a></li>
+            <li><a class="notyet" href="#">Services<i class="menu-chevron  fas fa-chevron-right"></i></a></li>
+            <li><a class="notyet" href="#">Order Status</a></li>
+            <li><a class="notyet" href="#">Delivery</a></li>
+            <li><a class="notyet" href="#">Returns</a></li>
+            <li><a class="notyet" href="#">Site Feedback</a></li>
+            <li><a class="notyet" href="#">About Nike<i class="menu-chevron fas fa-chevron-right"></i></a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="category">
+            <a class="category-genre" href="#"> men </a> / 
+            <a class="category-type" href="#"> shoes</a>
+        </div>
+            <div class="subdiv-filters">    
+            <span class="shoes-category-title">men's running shoes</span>
+            <span class="products-actions">
+                <ul>
+                    <li id="filter-btn">
+                        <a href="#">filter</a>
+                        <i class="fas fa-filter"></i>
+                    </li>
+                    <li id="sort-btn">
+                        <a href="#">sort by</a>
+                        <i class="fas fa-chevron-down"></i>
+                    </li>
+                </ul>
+            </span>
+        </div>
+        <main class="content">
+        
+            <div class="filters">
+                <ul class="shoes-category-list">
+                    <li>lifestyle <span class="no-pieces">(322)</span></li>
+                    <li>jordan <span class="no-pieces">(23)</span></li>
+                    <li>running <span class="no-pieces">(41)</span></li>
+                    <li>basketball <span class="no-pieces">(122)</span></li>
+                    <li>training & gym <span class="no-pieces">(300)</span></li>
+                    <li>football <span class="no-pieces">(63)</span></li>
+                    <li>skateboarding <span class="no-pieces">(223)</span></li>
+                    <li>american football <span class="no-pieces">(3)</span></li>
+                    <li>baseball <span class="no-pieces">(775)</span></li>
+                    <li>tennis <span class="no-pieces">(213)</span></li>
+                    <li>athletics <span class="no-pieces">(25)</span></li>
+                    <li>walking <span class="no-pieces">(144)</span></li>
+                    <li>yoga <span class="no-pieces">(3)</span></li>
+                    <li>swimming <span class="no-pieces">(2)</span></li>
+                    <li>volleyball <span class="no-pieces">(8)</span></li>
+                </ul>
+    
+                <div class="filter-div">
+                    <span class="category-name color-filter">Color <i class="fas fa-chevron-down"></i></span>
+                    <ul class="category-filters-list colors">
+                        <li>
+                            <div class="color-div black" style="background: black"></div>
+                            <div>black</div>
+                        </li>
+                        <li>
+                            <div class="color-div blue" style="background: blue"></div>
+                            <div>blue</div>
+                        </li>
+                        <li>
+                            <div class="color-div brown" style="background: brown"></div>
+                            <div>brown</div>
+                        </li>
+                        <li>
+                            <div class="color-div green" style="background: green"></div>
+                            <div>green</div>
+                        </li>
+                        <li>
+                            <div class="color-div grey" style="background: grey"></div>
+                            <div>grey</div>
+                        </li>
+                        <li>
+                            <div class="color-div orange" style="background: orange"></div>
+                            <div>orange</div>
+                        </li>
+                        <li>
+                            <div class="color-div purple" style="background: purple"></div>
+                            <div>purple</div>
+                        </li>
+                        <li>
+                            <div class="color-div red" style="background: red"></div>
+                            <div>red</div>
+                        </li>
+                        <li>
+                            <div class="color-div white" style="background: white"></div>
+                            <div>white</div>
+                        </li>
+                        <li>
+                            <div class="color-div yellow" style="background: yellow"></div>
+                            <div>yellow</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="filter-div">
+                    <span class="category-name brand-filter">Brand <i class="fas fa-chevron-down"></i></span>
+                    <ul class="category-filters-list brands">
+                        <li>nike</li>
+                        <li>nike by you</li>
+                    </ul>
+                </div>
+                <div class="filter-div">
+                    <span class="category-name shoes-filter">Shoes <i class="fas fa-chevron-down"></i></span>
+                    <ul class="category-filters-list shoes">
+                        <li>cleats & spikes</li>
+                    </ul>
+                </div>
+                <div class="filter-div">
+                    <span class="category-name icon-filter">Icon <i class="fas fa-chevron-down"></i></span>
+                    <ul class="category-filters-list icons">
+                        <li>nike epic react</li>
+                        <li>nike free RN</li>
+                        <li>pegasus</li>
+                        <li>structure</li>
+                        <li>+ more</li>
+                    </ul>
+                </div>
+                <div class="filter-div">
+                    <span class="category-name tech-filter">Technology <i class="fas fa-chevron-down"></i></span>
+                    <ul class="category-filters-list technology">
+                        <li>nike joyride</li>
+                        <li>flyknit</li>
+                        <li>flywire</li>
+                        <li>lunarlon</li>
+                        <li>+ more</li>
+                    </ul>
+                </div>
+                <div class="filter-div">
+                    <span class="category-name s-h-filter">Shoe Height <i class="fas fa-chevron-down"></i></span>
+                    <ul class="category-filters-list s-height">
+                        <li>low top</li>
+                    </ul>
+                </div>
+                <div class="filter-div">
+                    <span class="category-name width-filter">Width <i class="fas fa-chevron-down"></i></span>
+                    <ul class="category-filters-list s-width">
+                        <li>regular</li>
+                        <li>wide</li>
+                        <li>extra wide</li>
+                        <li>narrow</li>
+                    </ul>
+                </div>
+                <div class="filter-div">
+                    <span class="category-name s-f-filter">Shoe Feel <i class="fas fa-chevron-down"></i></span>
+                    <ul class="category-filters-list s-feel">
+                        <li>barefoot-like feel</li>
+                        <li>neutral feel</li>
+                        <li>stability</li>
+                    </ul>
+                </div>
+                <div class="filter-div">
+                    <span class="category-name surface-filter">Surface <i class="fas fa-chevron-down"></i></span>
+                    <ul class="category-filters-list surface">
+                        <li>road</li>
+                        <li>track</li>
+                        <li>trail</li>
+                    </ul>
+                </div>
+                <div class="filter-div">
+                    <span class="category-name closure-type-filter">Closure Type <i class="fas fa-chevron-down"></i></span>
+                    <ul class="category-filters-list closure-type">
+                        <li>slip on</li>
+                        <li>zip closure</li>
+                    </ul>
+                </div>
+                <div class="filter-div">
+                    <span class="category-name benefits-filter">Benefits <i class="fas fa-chevron-down"></i></span>
+                    <ul class="category-filters-list benefits">
+                        <li>ultra comfort</li>
+                        <li>tuned speed</li>
+                        <li>natural motion</li>
+                    </ul>
+                </div>
+                <div class="filter-div">
+                    <span class="category-name size-filter">Size <i class="fas fa-chevron-down"></i></span>
+                    <ul class="category-filters-list sizes">
+                        <li>35.5</li>
+                        <li>36</li>
+                        <li>36.5</li>
+                        <li>37.5</li>
+                        <li>38</li>
+                        <li>38.5</li>
+                        <li>39</li>
+                        <li>40</li>
+                        <li>40.5</li>
+                        <li>41</li>
+                        <li>42</li>
+                        <li>42.5</li>
+                        <li>43</li>
+                        <li>44</li>
+                        <li>44.5</li>
+                        <li>45</li>
+                        <li>45.5</li>
+                        <li>46</li>
+                        <li>47</li>
+                        <li>47.5</li>
+                        <li>48.5</li>
+                        <li>49.5</li>
+                    </ul>
+                </div>
+    
+            </div>
+            <div class="products">
+                <div class="products-center">
+                    
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
