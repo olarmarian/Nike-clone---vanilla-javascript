@@ -40,7 +40,7 @@ header{
     font-size: 13px;
     color: var(#cecece);
     text-transform: capitalize;
-    z-index: 1;
+    z-index: 2;
 }
 
 .navbar-nike-icon,
@@ -185,7 +185,7 @@ input:placeholder-shown{
     position: absolute;
     right:0;
     top: 50px;
-    z-index:4;
+    z-index:1;
     background: #fff;
     font-size: 14px;
 }
@@ -1098,7 +1098,7 @@ footer{
         margin: 0 auto;
     }
     .products-center{
-        grid-template-columns: repeat(auto-fit,minmax(500px,1fr));
+        grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
     }
     
 }

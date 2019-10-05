@@ -2,6 +2,7 @@ const homepageList = document.querySelector(".homepage-products-section");
 const productsDOM = document.querySelector(".products-center");
 const overlayMenu = document.querySelector(".fa-bars");
 const overlayMenuDOM = document.querySelector(".menu-overlay");
+const overlayMenuList = document.querySelector(".menu-overlay-list");
 const shoesCategory = document.querySelector('.shoes-category-list')
 const shoesCategoryTitle = document.querySelector('.shoes-category-title')
 
@@ -187,7 +188,6 @@ document.addEventListener("DOMContentLoaded",()=>{
             overlayMenuDOM.classList.add("hidden");
         }
     })
-
     shoesCategory.addEventListener('click',function(){
         let category = "";
         if(event.target && event.target.matches("li")){
@@ -202,8 +202,8 @@ document.addEventListener("DOMContentLoaded",()=>{
             // Storage.saveProducts(products);
         });
     });
-    
-    collectionDOM.addEventListener('click',function(){        
+  
+    function handleMenu(event){
         localStorage.setItem("genre",event.target.innerText.toLowerCase());
         filters = {
             genre:localStorage.getItem("genre"),
@@ -217,8 +217,16 @@ document.addEventListener("DOMContentLoaded",()=>{
         categoryGenre.innerHTML = filters.genre;
         shoesCategoryTitle.innerText = `${categoryGenre.innerText}'s all shoes`;
         localStorage.setItem("type","shoes");
+     }
+    
+    collectionDOM.addEventListener('click',function(){        
+        handleMenu(event);
     })
-
+    
+    overlayMenuList.addEventListener('click',()=>{
+        handleMenu(event);
+    })
+    
     let hidden = false;
     filterBtn.addEventListener('click',function () {
         if(hidden){
