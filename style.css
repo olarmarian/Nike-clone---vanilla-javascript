@@ -829,7 +829,9 @@ footer{
     .filters-900px > .filter-div > ul li{
         padding-left: 1.2em;
     }
-    
+    .homepage-products-section:hover{
+        height: auto;
+    }        
 }
 
 @media screen and (max-width:880px){
