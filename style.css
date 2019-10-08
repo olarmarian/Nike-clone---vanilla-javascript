@@ -194,14 +194,16 @@ input:placeholder-shown{
 }
 .menu-overlay ul li{
     display: block;
-    padding: 20px 20px 20px 20px;
     background: #f7faff;
     border-bottom: 1px solid #cecece;
     color:#cecece;
 }
+.menu-overlay ul li a{
+    padding: 20px 20px 20px 20px;
+}
 .notyet{
     color:#cecece;
-    cursor: not-allowed
+    cursor: not-allowed;
 }
 .menu-overlay ul li span{
     display:flex;
@@ -801,6 +803,31 @@ footer{
     }
     .filters{
         display: none;
+    }
+    .filters-900px{
+        display: block;
+        position: absolute;
+        top: 6%;
+        left: 0;
+        width: 70%;
+        background: #f7faff;
+        overflow: auto;
+    }
+    .filters-900px > ul{
+        overflow: scroll;
+        padding: 0;
+    }
+    .filters-900px > ul > li{
+        padding: 10px 5px;
+    }
+
+    .filters-900px > .filter-div > span{
+        display: flex;
+        justify-content: space-between;
+        padding: 1em;
+    }
+    .filters-900px > .filter-div > ul li{
+        padding-left: 1.2em;
     }
     
 }

@@ -181,12 +181,11 @@ document.addEventListener("DOMContentLoaded",()=>{
     });
     overlayMenu.addEventListener('click',function(){
         if(showMenu){
-            showMenu = !showMenu;
             overlayMenuDOM.classList.remove("hidden");
         }else{
-            showMenu = !showMenu;
             overlayMenuDOM.classList.add("hidden");
         }
+        showMenu = !showMenu;
     })
     shoesCategory.addEventListener('click',function(){
         let category = "";
@@ -199,7 +198,6 @@ document.addEventListener("DOMContentLoaded",()=>{
         products.getFilteredShoes().then(products=>{
             ui.displayProducts(products);
             shoesCategoryTitle.innerText = `${categoryGenre.innerText}'s ${category} ${categoryType.innerText}`
-            // Storage.saveProducts(products);
         });
     });
   
@@ -228,14 +226,20 @@ document.addEventListener("DOMContentLoaded",()=>{
     })
     
     let hidden = false;
+    
     filterBtn.addEventListener('click',function () {
-        if(hidden){
-            filterDOM.classList.add("hidden");
-            hidden = !hidden;
+        if(getWidth() <= 800){
+            filterDOM.classList.remove('filters');
+            filterDOM.classList.add('filters-900px');
         }else{
-            filterDOM.classList.remove("hidden");
-            hidden = !hidden;
+            if(hidden){
+                filterDOM.classList.add("hidden");
+            }else{
+                filterDOM.classList.remove("hidden");
+            }
+            hidden = !hidden;                
         }
+        
     })
 
     colorsFilter.addEventListener('click',function(){
@@ -247,12 +251,14 @@ document.addEventListener("DOMContentLoaded",()=>{
             products.getFilteredShoes()
                 .then(items =>{
                     ui.displayProducts(items)
+                    hideFilters();
                 });
         }else if(event.target && event.target.matches("div")){
             filters.colors = event.target.parentElement.lastElementChild.innerHTML.toLowerCase();
             products.getFilteredShoes()
                 .then(items =>{
                     ui.displayProducts(items)
+                    hideFilters();
                 });
         }
     })
@@ -265,7 +271,8 @@ document.addEventListener("DOMContentLoaded",()=>{
             filters.brand = event.target.innerText
             products.getFilteredShoes()
                 .then(items =>{
-                    ui.displayProducts(items)
+                    ui.displayProducts(items);
+                    hideFilters();
                 })
         }
     })
@@ -279,6 +286,7 @@ document.addEventListener("DOMContentLoaded",()=>{
             products.getFilteredShoes()
                 .then(items =>{
                     ui.displayProducts(items)
+                    hideFilters();
                 })
         }
     })
@@ -292,6 +300,7 @@ document.addEventListener("DOMContentLoaded",()=>{
             products.getFilteredShoes()
                 .then(items =>{
                     ui.displayProducts(items)
+                    hideFilters();
                 })
         }
     })
@@ -305,6 +314,7 @@ document.addEventListener("DOMContentLoaded",()=>{
             products.getFilteredShoes()
                 .then(items =>{
                     ui.displayProducts(items)
+                    hideFilters();
                 })
         }
     })
@@ -318,6 +328,7 @@ document.addEventListener("DOMContentLoaded",()=>{
             products.getFilteredShoes()
                 .then(items =>{
                     ui.displayProducts(items)
+                    hideFilters();
                 })
         }
     })
@@ -331,6 +342,7 @@ document.addEventListener("DOMContentLoaded",()=>{
             products.getFilteredShoes()
                 .then(items =>{
                     ui.displayProducts(items)
+                    hideFilters();
                 })
         }
     })
@@ -404,12 +416,6 @@ document.addEventListener("DOMContentLoaded",()=>{
 
 })
 
-document.addEventListener('click',()=>{
-    let inside = overlayMenuDOM.contains(event.target);
-    console.log(open,inside);
-    
-})
-
 function handleFilters(target,filterList) { 
     if(target.children.length === 0){
         if(target.className === "fas fa-chevron-down"){
@@ -430,3 +436,19 @@ function handleFilters(target,filterList) {
         }
     }
  }
+ function hideFilters(){
+    if(getWidth()<=800){
+        
+        filterDOM.classList.remove("filters-900px")
+        filterDOM.classList.add("filters");
+    }
+}
+function getWidth() {
+    return Math.max(
+      document.body.scrollWidth,
+      document.documentElement.scrollWidth,
+      document.body.offsetWidth,
+      document.documentElement.offsetWidth,
+      document.documentElement.clientWidth
+    );
+  }
