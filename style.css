@@ -961,36 +961,40 @@ footer{
         top: 60%;
         font-size: 15px;
     }
+    
     .shop-button{
         font-size:10px;
         padding: 10px 15px 10px 15px;
     }
+    
     .homepage-products-section{
         display: block;
         -webkit-transition: none;
         transition: none;
-    }
-    .homepage-products-section:hover{
         height: inherit;
     }
+    
     .homepage-products-list{
         padding: 4px;
     }
+    
     .homepage-products-list-item{
         -webkit-transition: linear 2s ease-in;
         transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
-    }
-    .homepage-products-list .homepage-products-list-item{
-        display: none
     }
     
     .homepage-products-list .homepage-products-list-title{
         display: list-item;
     }
-    .homepage-products-list:hover > .homepage-products-list-item{
+    
+    .display-list-items{
         display: list-item;
         margin-left: 20px;
         text-decoration: none;
+    }
+    
+    .hide-list-items{
+        display: none;
     }
 
     .homepage-products-list:hover {
