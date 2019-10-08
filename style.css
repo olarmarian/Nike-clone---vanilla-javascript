@@ -997,10 +997,6 @@ footer{
         display: none;
     }
 
-    .homepage-products-list:hover {
-        height: inherit;
-    }
-
     .more-nike-content{
         grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
     }
