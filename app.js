@@ -229,8 +229,13 @@ document.addEventListener("DOMContentLoaded",()=>{
     
     filterBtn.addEventListener('click',function () {
         if(getWidth() <= 800){
-            filterDOM.classList.remove('filters');
-            filterDOM.classList.add('filters-900px');
+            if(filterDOM.classList.contains("filters")){
+                filterDOM.classList.remove('filters');
+                filterDOM.classList.add('filters-900px');
+            }else{
+                filterDOM.classList.add('filters');
+                filterDOM.classList.remove('filters-900px');
+            }
         }else{
             if(hidden){
                 filterDOM.classList.add("hidden");
@@ -355,6 +360,7 @@ document.addEventListener("DOMContentLoaded",()=>{
             filters.surface = event.target.innerText
             products.getFilteredShoes()
                 .then(items =>{
+                    hideFilters()
                     ui.displayProducts(items)
                 })
         }
@@ -368,6 +374,7 @@ document.addEventListener("DOMContentLoaded",()=>{
             filters.benefits = event.target.innerText
             products.getFilteredShoes()
                 .then(items =>{
+                    hideFilters()
                     ui.displayProducts(items)
                 })
         }
@@ -382,6 +389,7 @@ document.addEventListener("DOMContentLoaded",()=>{
             filters.size = event.target.innerText
             products.getFilteredShoes()
                 .then(items =>{
+                    hideFilters()
                     ui.displayProducts(items)
                 })
         }
@@ -395,6 +403,7 @@ document.addEventListener("DOMContentLoaded",()=>{
             filters.shoeFeel = event.target.innerText
             products.getFilteredShoes()
                 .then(items =>{
+                    hideFilters()
                     ui.displayProducts(items)
                 })
         }
@@ -438,7 +447,6 @@ function handleFilters(target,filterList) {
  }
  function hideFilters(){
     if(getWidth()<=800){
-        
         filterDOM.classList.remove("filters-900px")
         filterDOM.classList.add("filters");
     }
